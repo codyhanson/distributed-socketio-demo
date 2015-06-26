@@ -16,6 +16,9 @@ socket.on('connect_timeout', function(error){
 socket.on('pubevent', function(data){
     console.log(JSON.stringify(data));
 });
+socket.on('connected_to', function(data){
+    console.log('Connected to server:' + JSON.stringify(data));
+});
 socket.on('disconnect', function(){
     console.log('SocketIO disconnected');
 });
